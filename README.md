@@ -13,7 +13,7 @@ getString is a function that retrun a description string of JSON object by burni
 Example
 =================
         showMe
-=================
+
 
 params
         "functionName": true(when object is a function only show its name and "function()");
