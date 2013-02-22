@@ -9,10 +9,10 @@ getStr is a function that return a description string of JSON object by burning 
 
 getString is a function that retrun a description string of JSON object by burning computer's CPU.
 
-=================
 Example
 =================
 showMe
+=================
 
 	/*
 	*params
@@ -58,4 +58,35 @@ showMe
 
 	notice: if stack overflow please try to use burnig: 'CPU' ,and set the maxDepth low;
 
+typeOf
 =================
+	/*
+	* typeOf({},['object','string']) == true;
+	*
+	* typeOf({},'object) == true;
+	*
+	* typeOf({}) == 'Object'
+	*
+	* typeOf(null, 'Object') == false;
+	*
+	* typeOf(function(){},'function') == true;
+	*
+	* typeOf(undefined, 'undefined') == true;
+	*
+	* typeOf(null,'null') == true;
+	*
+	* typeOf() == 'undefined';
+	*
+	* typeOf(NaN) == 'NaN';
+	*/
+
+getStr
+==================
+	(Recursion)
+	getStr([1, "a", function(){var a = {a: 1};}, true, {b: 2}]); === '[1, "a", function(){var a = {a: 1};}, true, {b: 2}]';
+	
+getString
+==================
+	(Iteration)
+	getString([1, "a", function(){var a = {a: 1};}, true, {b: 2}]); === '[1, "a", function(){var a = {a: 1};}, true, {b: 2}]';
+
