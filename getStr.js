@@ -1,4 +1,4 @@
-// 将字符串 数组 对象 以字符串的形式返回。// return a string, which describe the json object passed in.
+// 将字符串 数组 对象 以字符串的形式返回。// return a string, which describe the json object that passed in.
 if (!getStr) {
         var getStr = function(obj) {
 		var str = '';
