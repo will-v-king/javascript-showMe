@@ -1,6 +1,6 @@
 // 将字符串 数组 对象 以字符串的形式返回。// return a string, which describe the json object that passed in.
 if (!getStr) {
-        var getStr = function(obj) {
+	var getStr = function(obj) {
 		var str = '';
 		if (typeOf(arguments[1], 'String')) {
 			var argumentsObj = {};
@@ -26,7 +26,7 @@ if (!getStr) {
 					str = str + getStr(obj[i], arguments[1]) + ',';
 				}
 				var lio = str.lastIndexOf(',');
-				lio = lio == - 1 ? str.length: lio;
+				lio = lio == -1 ? str.length : lio;
 				str = str.substring(0, lio) + ']';
 				delete lio;
 				delete length;
@@ -38,14 +38,14 @@ if (!getStr) {
 					for (var prop in obj) {
 						str = str + '"' + prop + '"' + ':' + getStr(obj[prop], arguments[1]) + ',';
 					}
-				} catch(e) {
+				} catch (e) {
 					if (!jQuery.isPlainObject(obj)) {
 						str = str + 'object';
 						break;
 					}
 				}
 				var lio = str.lastIndexOf(',');
-				lio = lio == - 1 ? str.length: lio;
+				lio = lio == -1 ? str.length : lio;
 				str = str.substring(0, lio) + '}';
 				delete lio;
 				delete prop;
